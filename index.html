@@ -12,24 +12,39 @@
 
 <body>
 
-<div data-role="page">
+<!-- Start of first page -->
+<div data-role="page" id="foo">
 
 	<div data-role="header">
-		<h1>Single page</h1>
+		<h1>Foo</h1>
 	</div><!-- /header -->
 
 	<div role="main" class="ui-content">
-		<p>This is a single page boilerplate template that you can copy to build your first jQuery Mobile page. Each link or form from here will pull a new page in via Ajax to support the animated page transitions.</p>
-		<p>Just view the source and copy the code to get started. All the CSS and JS is linked to the jQuery CDN versions so this is super easy to set up. Remember to include a meta viewport tag in the head to set the zoom level.</p>
-		<p>This template is standard HTML document with a single "page" container inside, unlike a <a href="../pages-multi-page/" data-ajax="false">multi-page template</a> that has multiple pages within it. We strongly recommend building your site or app as a series of separate pages like this because it's cleaner, more lightweight and works better without JavaScript.</p>
+		<p>I'm first in the source order so I'm shown as the page.</p>
+		<p>View internal page called <a href="#bar">bar</a></p>
 	</div><!-- /content -->
 
 	<div data-role="footer">
-		<h4>Footer content</h4>
+		<h4>Page Footer</h4>
 	</div><!-- /footer -->
-
 </div><!-- /page -->
 
+<!-- Start of second page -->
+<div data-role="page" id="bar">
+
+	<div data-role="header">
+		<h1>Bar</h1>
+	</div><!-- /header -->
+
+	<div role="main" class="ui-content">
+		<p>I'm the second in the source order so I'm hidden when the page loads. I'm just shown if a link that references my id is beeing clicked.</p>
+		<p><a href="#foo">Back to foo</a></p>
+	</div><!-- /content -->
+
+	<div data-role="footer">
+		<h4>Page Footer</h4>
+	</div><!-- /footer -->
+</div><!-- /page -->
 </body>
 </html>
 
