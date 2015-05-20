@@ -14,7 +14,7 @@
 			pages.each(function(i, page){
 				$(page).attr("id", "P_" + i);
 				$(page).css("background", "url('images/"+i+".jpg') center");
-				$(page).css("background-size", "100% 100%");
+				$(page).css("background-size", "cover");
 				var prev = "#", next = "#P_1";
 				if(i != 0 && pages[i+1]){
 					prev = "#P_" + (i-1);
